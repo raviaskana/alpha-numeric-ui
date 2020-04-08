@@ -1,0 +1,32 @@
+.search-box input {
+    width: 250px;
+    padding: 10px 10px 10px 10px;
+    font-size: 15px;
+    margin: 10px 10px 15px 10px;
+}
+.pagination-box {
+    margin: 10px 10px 10px 10px;
+}
+
+.display-count {
+    margin: 10px 10px 10px 10px;
+}
+.card {
+    margin: 10px 10px 10px 10px;
+    background-color: antiquewhite;
+    width: 200px;
+}
+.header{
+   background-color: coral;
+   margin: 10px 10px -5px 10px;
+   width: 200px;
+}
+.results{
+  height:400px;
+  overflow-y:scroll;
+  width: 220px;
+}
+.error {
+    color: red;
+    margin: 10px 10px -5px 10px;
+}

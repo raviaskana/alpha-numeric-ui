@@ -1,0 +1,26 @@
+<div class="display-count">Total Count {{(page | async)?.totalCount}}</div>
+<div class="search-box">
+    <div [formGroup]="filterForm">
+      <input formControlName="phoneNum"  class="form-control" placeholder="Please enter phone number">
+      <div *ngIf="filterForm.get('phoneNum').hasError('required')" class="error">
+        Please enter phone #
+      </div>
+
+      <div *ngIf="filterForm.get('phoneNum').hasError('pattern')" class="error">
+        Please enter valid 7 or 10 digit phone number
+      </div>
+    </div>
+</div>
+<div class="pagination-box">
+  <div *ngIf="dataLoaded | async" class="col-md-12">
+    <app-paginator [page]="page | async" (pageChange)="onPageChanged($event)"></app-paginator>
+    <div class="header">Alphanumeric phonenum</div>
+    <div class="results">
+      <div class="card" *ngFor="let phone of (page | async)?.data;let i=index">
+            <div class="row">
+              <span class="title">{{phone}}</span>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
